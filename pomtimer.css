@@ -1,0 +1,97 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
+  Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --pomodoro: peachpuff;
+    --shortbrk: lightslategray;
+    --longbrk: lightblue;
+}
+
+body {
+    background-color: var(--pomodoro);
+    transition: background-color 1s ease;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: 0.5fr 1.75fr 2.5fr 1.75fr;
+    grid-template-areas: "progress"
+                         "buttons"
+                         "timer"
+                         "main_button";
+}
+
+#progbar {
+    border-radius: 2px;
+    width: 99%;
+    height: 12px;
+    position: fixed;
+    top: 0;
+    grid-area: progress;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+progress::-webkit-progress-value {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.buttonGroup {
+    display: flex;
+    grid-area: buttons;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode {
+    padding: 14px;
+    margin: 12px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.mode.active {
+    border-color: white;
+}
+
+.timer {
+    grid-area: timer;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-size: 175px;
+    font-weight: bold;
+}
+
+.main-button {
+    grid-area: main_button;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.start {
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 15px 60px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color:lightcoral;
+    text-transform: uppercase;
+    border-color: transparent;
+}
+
+.start:active {
+    background-color:palevioletred;
+}

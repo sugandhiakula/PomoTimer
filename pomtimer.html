@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="pomtimer.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <main class="container">
+            <progress id="progbar"></progress>
+            <div class="buttonGroup">
+                <button data-mode="pomodoro" class="pomodoro mode">Pomodoro</button>
+                <button data-mode="shortbrk" class="shortbrk mode">Short break</button>
+                <button data-mode="longbrk" class="longbrk mode">Long break</button>
+            </div>
+            <div class="timer">
+                <span class="minutes">25</span>
+                <span class="separator">:</span>
+                <span class="seconds">00</span>
+            </div>
+            <div class="main-button">
+                <button class="start" data-action="start">Start</button>
+            </div>
+        </main>
+        <script src="pomtimer.js" type="text/javascript"></script>
+    </body>
+</html>
